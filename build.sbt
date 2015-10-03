@@ -11,7 +11,8 @@ mainClass := Some("Main")
 resolvers += "typesafe" at "http://repo.typesafe.com/typesafe/releases/"
 
 libraryDependencies ++= Seq(
-  "org.mongodb" %% "casbah" % "2.8.2"
+  "org.mongodb" %% "casbah" % "2.8.2",
+  "com.typesafe.play" %% "play-json" % "2.4.0"
 )
 
 fork in (Test, run) := true
