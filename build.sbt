@@ -6,6 +6,12 @@ scalaVersion := "2.11.7"
 
 sbtVersion := "0.13.9"
 
+mainClass := Some("Main")
+
+resolvers += "typesafe" at "http://repo.typesafe.com/typesafe/releases/"
+
 libraryDependencies ++= Seq(
-  "org.mongodb.scala" %% "casbah" % "2.8.2"
+  "org.mongodb" %% "casbah" % "2.8.2"
 )
+
+fork in (Test, run) := true
