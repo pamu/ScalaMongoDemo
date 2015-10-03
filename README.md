@@ -1,0 +1,2 @@
+# ScalaMongoDemo
+Scala Mongo Demo
