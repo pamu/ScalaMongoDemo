@@ -1,4 +1,5 @@
 import com.mongodb.casbah.MongoClient
+import com.mongodb.casbah.commons.MongoDBObject
 import play.api.libs.json.Json
 
 object Main {
@@ -10,5 +11,6 @@ object Main {
     val carOption = carClassifieds.headOption
     val carJsonOption = carOption.map(item => Json.prettyPrint(Json.parse(item.toString)))
     println(carJsonOption.getOrElse("nothing"))
+    db("test").drop()
   }
 }
